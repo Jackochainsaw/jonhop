@@ -1,0 +1,17 @@
+/* - Module 2 Solution CSS - Jackson Davies - 2020 - */
+* {
+  font-family: Century Gothic;
+}
+
+.column {
+  max-width: 33%;
+}
+
+/* - Mobile media call -
+767px */
+
+/* - Table media call -
+768px - 991px */
+
+/* - desktop media call -
+992px */
