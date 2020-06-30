@@ -1,17 +1,72 @@
 /* - Module 2 Solution CSS - Jackson Davies - 2020 - */
 * {
   font-family: Century Gothic;
+  font-size: 80%%;
 }
 
-.column {
+body {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  border: 1px solid black;
+}
+
+.container {
+  background-color: white;
+}
+
+div {
+  background-color: #DFDFDF;
+  border: 1px solid black;
   max-width: 33%;
 }
 
-/* - Mobile media call -
-767px */
+#beef {
+  background-color: brown;
+  clear: left;
+}
 
-/* - Table media call -
-768px - 991px */
+#chicken {
+  background-color: yellow;
+  clear: left;
+}
 
-/* - desktop media call -
+#sushi {
+  background-color: pink;
+  clear: left;
+}
+
+/* - Mobile media call - rows take up the whole width */
+@media (max-width: 767px){
+
+div {
+  max-width: 100%
+}
+
+}
+
+/* - Tablet media call - first 2 sections take up 50% third row takes up 100% */
+@media (min-width: 768px) and (max-width: 991px){
+
+  div {
+    max-width: 50%;
+  }
+
+  div:nth-child(3){
+    max-width: 100%
+  }
+
+}
+
+/* - desktop media call - float property required
 992px */
+
+@media (min-width: 992px){
+
+  div {
+    max-width: 33%;
+  }
+
+}
