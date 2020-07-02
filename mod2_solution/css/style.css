@@ -1,72 +1,118 @@
 /* - Module 2 Solution CSS - Jackson Davies - 2020 - */
 * {
-  font-family: Century Gothic;
-  font-size: 80%%;
+  margin: 0px;
+  padding: 0px;
+  font-family: "century gothic", sans-serif;
 }
 
-body {
-  margin: 0;
-  padding: 0;
+section {
+  clear: right;
+  padding: 10px;
 }
 
-p {
-  border: 1px solid black;
+.section-head {
+  width: 120px;
+  height: 30px;
+  padding-top: 5px;
+  position: relative;
+  float: right;
+  font-size: 1.25em;
+  border: solid 2px black;
+  text-align: center;
+  top: -2px;
+  right: -2px;
+}
+
+h1 {
+  margin: 20px;
+  font-size: 1.75em;
 }
 
 .container {
-  background-color: white;
+  box-sizing: border-box;
+  display: inline-block;
+  width: 100%;
+  height: 600px;
+  padding-top: 10px;
+  padding-left: 30px;
+  overflow: auto;
+  position: absolute;
 }
 
-div {
-  background-color: #DFDFDF;
-  border: 1px solid black;
-  max-width: 33%;
+.box {
+  box-sizing: border-box;
+  border: solid 3px black;
+  background-color: #999999;
+  width: 30%;
+  height: 200px;
+  margin-right: 3%;
+  float: left;
 }
 
-#beef {
-  background-color: brown;
-  clear: left;
+#box-1 .section-head {
+  background-color: #D59798;
+  color: #000000;
+}
+#box-2 .section-head {
+  background-color: #C14543;
+  color: #ffffff;
+}
+#box-3 .section-head {
+  background-color: #E5D097;
+  color: #000000;
 }
 
-#chicken {
-  background-color: yellow;
-  clear: left;
+/*mobile*/
+@media (max-width: 767px) {
+
+    .container {
+      padding-left: 5px;
+      padding-right: 5px;
+      height: 1500px;
+    }
+
+    .box {
+      width: 95%;
+      margin-left: 10px;
+      margin-right: 3%;
+      margin-bottom: 15px;
+    }
+
 }
 
-#sushi {
-  background-color: pink;
-  clear: left;
-}
+/*tablet*/
+@media (min-width: 768px) and (max-width: 991px) {
 
-/* - Mobile media call - rows take up the whole width */
-@media (max-width: 767px){
-
-div {
-  max-width: 100%
-}
-
-}
-
-/* - Tablet media call - first 2 sections take up 50% third row takes up 100% */
-@media (min-width: 768px) and (max-width: 991px){
-
-  div {
-    max-width: 50%;
+  .container {
+    padding-left: 15px;
+    padding-right: 5px;
+    height: 500px;
   }
 
-  div:nth-child(3){
-    max-width: 100%
+  .box {
+    width: 47%;
+    margin-right: 3%;
+  }
+
+  .box:nth-child(3) {
+    width: 97%;
+    margin-top: 15px;
   }
 
 }
 
-/* - desktop media call - float property required
-992px */
+/*desktop*/
+@media (min-width: 992px) {
 
-@media (min-width: 992px){
+  .container {
+    padding-left: 60px;
+    padding-right: 5px;
+    height: 500px;
+  }
 
-  div {
-    max-width: 33%;
+  .box {
+    width: 30%;
+    margin-right: 3%;
   }
 
 }
